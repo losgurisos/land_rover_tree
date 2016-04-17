@@ -1,0 +1,55 @@
+.content{
+    background-image: url("../images/back_small.png");
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    width: 1000px;
+    height: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+.car_container{
+    height: 42px;
+    width: 42px;    background-size: 42px;
+    position: absolute;
+    top: 222px;
+    left: 186px;
+    border-radius: 20px;
+}
+.car_inches {
+    width: 100%;
+    margin: 0;
+    font-size: 5px;
+    color: white;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 1px;
+    box-sizing: border-box;
+}
+.car_year {
+    width: 100%;
+    margin: 0;
+    font-size: 7px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin-top: -5px;
+    box-sizing: border-box;
+}
+.car_image {
+    width: 25px;
+    margin: 0 auto;
+}
+.car_image  img {
+    width: 25px;
+    text-align: center;
+}
+.car_name {
+    width: 100%;
+    margin: 0;
+    font-size: 5px;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    box-sizing: border-box;
+}
