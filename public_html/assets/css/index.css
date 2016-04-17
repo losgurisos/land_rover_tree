@@ -1,15 +1,15 @@
 .content{
     background-image: url("../images/back_small.png");
-    background-size: 1000px;
+    background-size: 1280px;
     background-repeat: no-repeat;
-    width: 1000px;
-    height: 1100px;
+    width: 1280px;
+    height: 1500px;
     margin: 0 auto;
     position: relative;
 }
 .car_container{
-    height: 42px;
-    width: 42px;    background-size: 42px;
+    height: 55px;
+    width: 55px;    background-size: 55px;
     position: absolute;
     top: 222px;
     left: 186px;
@@ -18,7 +18,7 @@
 .car_inches {
     width: 100%;
     margin: 0;
-    font-size: 5px;
+    font-size: 7px;
     color: white;
     text-align: center;
     padding-top: 4px;
@@ -28,7 +28,7 @@
 .car_year {
     width: 100%;
     margin: 0;
-    font-size: 7px;
+    font-size: 9px;
     font-weight: bold;
     color: white;
     text-align: center;
@@ -37,17 +37,17 @@
     box-sizing: border-box;
 }
 .car_image {
-    width: 25px;
+    width: 35px;
     margin: 0 auto;
 }
 .car_image  img {
-    width: 25px;
+    width: 35px;
     text-align: center;
 }
 .car_name {
     width: 100%;
     margin: 0;
-    font-size: 5px;
+    font-size: 8px;
     color: white;
     text-align: center;
     padding: 0px;
