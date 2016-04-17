@@ -12,12 +12,22 @@
         <script src="assets/js/Logic.js"></script>
     </head>
     <body>
-        
-        
+
+
         <div class="content" id="content">
             <script>
                 $(document).ready(function () {
-                        $('.car_container').featherlight("<div>HOLA</div>");
+                    $('.car_container').on("click", function () {
+                        var car_id = ($(this).attr("id")).replace("car_", "");
+                        console.log(car_id);
+                        var selected_car = cm.get_car(car_id);
+                        $.featherlight("<div class='popup'>"
+                                + "<div class='popup_title'>" + selected_car.name + " - " + selected_car.year + "</div>"
+                                + "<div class='popup_img'><img src='" + selected_car.car_image + "' /></div>"
+                                + "<div class='popup_description'>" + selected_car.description + "</div>"
+                                + "</div>");
+                    });
+
                 });
             </script>
 
