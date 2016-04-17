@@ -8,6 +8,7 @@
     position: relative;
 }
 .car_container{
+    cursor: pointer;
     height: 55px;
     width: 55px;    background-size: 55px;
     position: absolute;
