@@ -4,7 +4,7 @@ var Position = function (x, y) {
     this.y = y;
 };
 
-var Car = function (x_position, y_position, car_image, reference_image, year, name, inches) {
+var Car = function (x_position, y_position, car_image, reference_image, year, name, inches,description) {
     var _this = this;
     this.car_image = car_image;
     this.reference_image = reference_image;
@@ -12,6 +12,7 @@ var Car = function (x_position, y_position, car_image, reference_image, year, na
     this.name = name;
     this.inches = inches;
     this.position = new Position(x_position, y_position);
+    this.description = description;
     this.id = 0;
     var _format;
     this.set_format = function (format) {
@@ -41,8 +42,8 @@ var CarManager = function () {
     var _id_format = "car_{{id}}";
     var _format = "<div>{{name}}</div>";
 
-    this.add_car = function (x_position, y_position, car_image, reference_image, year, name, inches) {
-        var car = new Car(x_position, y_position, car_image, reference_image, year, name, inches);
+    this.add_car = function (x_position, y_position, car_image, reference_image, year, name, inches, description) {
+        var car = new Car(x_position, y_position, car_image, reference_image, year, name, inches, description);
         car.id = _id + 1;
         car.set_format(_format);
         _car_list.push(car);
