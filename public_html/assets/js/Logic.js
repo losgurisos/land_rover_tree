@@ -1,7 +1,7 @@
-
+var cm = new CarManager();
 $(document).ready(function () {
 
-    var cm = new CarManager();
+    
     cm.set_format('<div class="car_container" style="background-image: url(\'{{reference_image}}\')">'
             + '<div class = "car_inches" > {{car_inches}} </div>'
             + '<div class = "car_image" > <image src = "{{car_image}}" / > </div>'

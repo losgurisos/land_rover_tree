@@ -4,7 +4,7 @@ var Position = function (x, y) {
     this.y = y;
 };
 
-var Car = function (x_position, y_position, car_image, reference_image, year, name, inches,description) {
+var Car = function (x_position, y_position, car_image, reference_image, year, name, inches, description) {
     var _this = this;
     this.car_image = car_image;
     this.reference_image = reference_image;
@@ -45,16 +45,22 @@ var CarManager = function () {
     this.add_car = function (x_position, y_position, car_image, reference_image, year, name, inches, description) {
         var car = new Car(x_position, y_position, car_image, reference_image, year, name, inches, description);
         car.id = _id + 1;
+        _id++;
         car.set_format(_format);
         _car_list.push(car);
         // console.log(car_list);
     };
+    this.get_car = function (car_id) {
+        return _car_list[car_id - 1];
+    };
+
     //renderer
     this.render_all = function () {
         _car_list.forEach(function (c) {
             var render = c.get_render();
             var jq_obj = $(render);
             jq_obj.attr('id', _id_format.replace("{{id}}", c.id));
+            jq_obj.addClass("car_render");
             jq_obj.css("left", typeof c.position.x !== 'number' ? 0:c.position.x );
             // todo: some hardcode here
             jq_obj.css("top",c.position.y === 'auto'?  Math.ceil((parseInt(c.year) - 1945) * 18.1 + 15) : c.position.y);
@@ -65,7 +71,18 @@ var CarManager = function () {
     this.set_format = function (format) {
         _format = format;
     };
-    //searcher TODO
-    //show_only_by()
-    //show_all
+    this.show_by_name = function (name) {
+        $(".car_render").fadeOut();
+        _car_list.forEach(function (c) {
+            if (c.name == name) {
+                var car_dom_id = _id_format.replace("{{id}}", c.id);
+                $("#" + car_dom_id).fadeIn();
+            }
+        });
+    };
+    this.show_all = function () {
+        $(".car_render").fadeIn();
+    };
+
+
 };
