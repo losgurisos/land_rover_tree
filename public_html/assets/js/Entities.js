@@ -60,6 +60,7 @@ var CarManager = function () {
             var render = c.get_render();
             var jq_obj = $(render);
             jq_obj.attr('id', _id_format.replace("{{id}}", c.id));
+            jq_obj.addClass("car_render");
             jq_obj.css("left", c.position.x);
             jq_obj.css("top", c.position.y);
             jq_obj.css("position", "absolute");
@@ -69,7 +70,18 @@ var CarManager = function () {
     this.set_format = function (format) {
         _format = format;
     };
-    //searcher TODO
-    //show_only_by()
-    //show_all
+    this.show_by_name = function (name) {
+        $(".car_render").fadeOut();
+        _car_list.forEach(function (c) {
+            if (c.name == name) {
+                var car_dom_id = _id_format.replace("{{id}}", c.id);
+                $("#" + car_dom_id).fadeIn();
+            }
+        });
+    };
+    this.show_all = function () {
+        $(".car_render").fadeIn();
+    };
+
+
 };
