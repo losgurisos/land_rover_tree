@@ -51,6 +51,52 @@
         </div>
         <div class="content" id="content">
             <script>
+
+                function afterRender(cars){
+
+                    $('#car-model-query').typeahead({
+                        //input: '.js-typeahead-model',
+                        order: "desc",
+                        hint: false,
+                        cancelButton: false,
+                        source: {
+                            data: function(){
+                                var models = [];
+                                for(var i in cars)
+                                    models.push(cars[i].name)
+                                return models;
+                            }()
+                                //"Centre Steer", "Series I 80''", "Tickford SW 80''", "Rolls-Royce 81'' B40", "Road Rover", "Pick-up 104''", "86'' Army Staff", "Minerva 80''", "Tractor", "Tempo 80''", "Series I 86''", "Series I LWB 107''", "Mulliners SW", "Forward Control 107''", "Series I 88''", "Road Rover", "Series II SWB LWB", "Forward Control 88''", "Series IIA 88''", "LWB 109''", "109'' Forest Rover", "Vicker's Hover Rover", "Forward Control 109''", "FV18601", "88''Amph", "129''", "120'' FC", "109'' Otal", "Forward Control 110''", "110'' Gun tractor", "Forward Control 1300 109''", "SYE 157F", "Power trailer", "Gunbuggy M250/300 88''", "Lightweight 88''", "Bug-Eye", "Velar", "109'' Pink Panther", "1-Ton 109''", "Range Rover Classic", "Lightweight 88''", "Series III 88''", "109''", "101''", "109'' Deep water wading", "109'' Cuthbertson", "109'' Militar", "LWB 119''", "SD5", "Forward Control 1300 101''", "Stage 1 109''", "100''", "Series IIIA", "Range Rover 4 door", "139'' 6x6 SMC FC 82", "Defender 110''", "Defender 130''", "Defender 90''", "Centaur", "110'' Llama", "140'' 6x6 Parentie", "Series IV 109''", "Foers Ibex I", "Discovery 1", "114'' Challenger/Juno", "Pathfinder", "109'' M - 250/300", "Tomcat", "Foers Ibex II", "Foers Ibex II", "Foers Ibex II", "P38A", "Freelander 1", "LCV 2/3", "Farmer's Friend", "Discovery 2", "SVX", "109'' Anibal PS10", "147''", "3000", "Discovery 3", "Range Stormer", "Sport L320", "Land-e", "Wildcat", "Nemesis", "Freelander 2", "LRX", "Discovery 4", "EXR", "F8", "Evoque L538", "DC100", "DC100 Sport", "Evoque convertible", "Range Rover L405", "Herour", "Sport L494", "Discovery Vision", "Freelander Sport"]
+                        },
+                        callback: {
+                            onClickAfter: function (node, a, item, event) {
+                                cm.show_by_name(item.display);
+                                console.log(item.display);
+                            }
+                        }
+                    });
+                    $('#car-year-query').typeahead({
+                        //input: '.js-typeahead-year',
+                        order: "desc",
+                        hint: false,
+                        cancelButton: false,
+                        source: {
+                            data: function(){
+                                var years = [];
+                                for(var i = 1945; i <= 2015; i++)
+                                    years.push(String(i));
+                                return years;
+                            }()
+
+                        },
+                        callback: {
+                            onClickAfter: function (node, a, item, event) {
+                                cm.show_by_year(item.display);
+                                console.log(item.display);
+                            },
+                        }
+                    })
+                }
                 $(document).ready(function () {
                     $('.car_container').on("click", function () {
                         var car_id = ($(this).attr("id")).replace("car_", "");
@@ -65,16 +111,21 @@
 
                 });
 
-                $("#car-model-query").keyup(function(){
-                    if($("#car-model-query").val().length > 0)
+                var car_model_query = $("#car-model-query");
+                var car_year_query = $("#car-year-query");
+
+                car_model_query.keyup(function(){
+
+                    if(car_model_query.val().length > 0)
                         $("#model-cancel-icon").show();
                     else{
                         cm.show_all()
                         $("#model-cancel-icon").hide()
                     }
                 });
-                $("#car-year-query").keyup(function(){
-                    if($("#car-year-query").val().length > 0)
+                car_year_query.keyup(function(){
+
+                    if(car_year_query.val().length > 0)
                         $("#year-cancel-icon").show();
                     else {
                         cm.show_all()
@@ -82,56 +133,32 @@
                     }
                 });
 
+                car_year_query.click(function(){
+
+                    $('.typeahead__result').html('');
+                    modelCancelSearching()
+                });
+
+                car_model_query.click(function(){
+
+                    $('.typeahead__result').html('');
+                    yearCancelSearching()
+                });
+
 
                 function modelCancelSearching(){
+                    car_model_query.val('');
                     $("#model-cancel-icon").hide()
-                    $("#car-model-query").val('');
                     cm.show_all()
                 }
                 function yearCancelSearching(){
-                    $("#car-year-query").val('');
+                    car_year_query.val('');
                     $("#year-cancel-icon").hide()
                     cm.show_all()
                 }
 
 
-                $.typeahead({
-                    input: '.js-typeahead-model',
-                    order: "desc",
-                    hint: true,
-                    cancelButton: false,
-                    source: {
-                        data: [
-                            "Centre Steer", "Series I 80''", "Tickford SW 80''", "Rolls-Royce 81'' B40", "Road Rover", "Pick-up 104''", "86'' Army Staff", "Minerva 80''", "Tractor", "Tempo 80''", "Series I 86''", "Series I LWB 107''", "Mulliners SW", "Forward Control 107''", "Series I 88''", "Road Rover", "Series II SWB LWB", "Forward Control 88''", "Series IIA 88''", "LWB 109''", "109'' Forest Rover", "Vicker's Hover Rover", "Forward Control 109''", "FV18601", "88''Amph", "129''", "120'' FC", "109'' Otal", "Forward Control 110''", "110'' Gun tractor", "Forward Control 1300 109''", "SYE 157F", "Power trailer", "Gunbuggy M250/300 88''", "Lightweight 88''", "Bug-Eye", "Velar", "109'' Pink Panther", "1-Ton 109''", "Range Rover Classic", "Lightweight 88''", "Series III 88''", "109''", "101''", "109'' Deep water wading", "109'' Cuthbertson", "109'' Militar", "LWB 119''", "SD5", "Forward Control 1300 101''", "Stage 1 109''", "100''", "Series IIIA", "Range Rover 4 door", "139'' 6x6 SMC FC 82", "Defender 110''", "Defender 130''", "Defender 90''", "Centaur", "110'' Llama", "140'' 6x6 Parentie", "Series IV 109''", "Foers Ibex I", "Discovery 1", "114'' Challenger/Juno", "Pathfinder", "109'' M - 250/300", "Tomcat", "Foers Ibex II", "Foers Ibex II", "Foers Ibex II", "P38A", "Freelander 1", "LCV 2/3", "Farmer's Friend", "Discovery 2", "SVX", "109'' Anibal PS10", "147''", "3000", "Discovery 3", "Range Stormer", "Sport L320", "Land-e", "Wildcat", "Nemesis", "Freelander 2", "LRX", "Discovery 4", "EXR", "F8", "Evoque L538", "DC100", "DC100 Sport", "Evoque convertible", "Range Rover L405", "Herour", "Sport L494", "Discovery Vision", "Freelander Sport"]
-                    },
-                    callback: {
-                        onClickAfter: function (node, a, item, event) {
-                            cm.show_by_name(item.display);
-                            console.log(item.display);
-                        },
-                    }
-                });
-                $.typeahead({
-                    input: '.js-typeahead-year',
-                    order: "desc",
-                    hint: true,
-                    cancelButton: false,
-                    source: {
-                        data: function(){
-                            var years = [];
-                            for(var i = 1945; i <= 2015; i++)
-                                years.push(String(i));
-                            return years;
-                        }()
 
-                    },
-                    callback: {
-                        onClickAfter: function (node, a, item, event) {
-                            cm.show_by_year(item.display);
-                            console.log(item.display);
-                        },
-                    }
-                });
             </script>
 
 

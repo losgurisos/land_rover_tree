@@ -111,6 +111,8 @@ $(document).ready(function () {
     cm.add_car(car_cat_pos_x.Freelander, 'auto', "assets/images/cars/7 Decada 05-15/100 Freelander Sport (2015).png", car_assets.freelander_circle, "2015", "Freelander Sport", "", "Texto 100");
     //render
     cm.render_all();
+
+    afterRender(cm.get_all_cars())
 });
 
 var car_assets = {

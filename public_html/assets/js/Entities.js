@@ -53,6 +53,9 @@ var CarManager = function () {
     this.get_car = function (car_id) {
         return _car_list[car_id - 1];
     };
+    this.get_all_cars = function(){
+        return _car_list;
+    }
 
     //renderer
     this.render_all = function () {
