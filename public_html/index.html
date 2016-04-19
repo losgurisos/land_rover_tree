@@ -47,7 +47,7 @@
                     </span>
 
                 </div>
-            </div> 
+            </div>
         </div>
         <div class="content" id="content">
             <script>
@@ -68,14 +68,18 @@
                 $("#car-model-query").keyup(function(){
                     if($("#car-model-query").val().length > 0)
                         $("#model-cancel-icon").show();
-                    else
+                    else{
+                        cm.show_all()
                         $("#model-cancel-icon").hide()
+                    }
                 });
                 $("#car-year-query").keyup(function(){
                     if($("#car-year-query").val().length > 0)
                         $("#year-cancel-icon").show();
-                    else
+                    else {
+                        cm.show_all()
                         $("#year-cancel-icon").hide()
+                    }
                 });
 
 

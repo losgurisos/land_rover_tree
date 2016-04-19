@@ -83,7 +83,7 @@ var CarManager = function () {
     this.show_by_year = function (year) {
         $(".car_render").fadeOut();
         _car_list.forEach(function (c) {
-            if (c.year == year) {
+            if (c.year === year) {
                 var car_dom_id = _id_format.replace("{{id}}", c.id);
                 $("#" + car_dom_id).fadeIn();
             }
