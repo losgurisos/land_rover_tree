@@ -61,9 +61,9 @@ var CarManager = function () {
             var jq_obj = $(render);
             jq_obj.attr('id', _id_format.replace("{{id}}", c.id));
             jq_obj.addClass("car_render");
-            jq_obj.css("left", typeof c.position.x !== 'number' ? 0:c.position.x );
+            jq_obj.css("left", typeof c.position.x !== 'number' ? 0:c.position.x + 3);
             // todo: some hardcode here
-            jq_obj.css("top",c.position.y === 'auto'?  Math.ceil((parseInt(c.year) - 1945) * (1161 - 15) / 70 + 15) : c.position.y);
+            jq_obj.css("top",c.position.y === 'auto'?  Math.ceil((parseInt(c.year) - 1945) * (1161 - 15) / 70 + 23) : c.position.y);
             jq_obj.css("position", "absolute");
             $("#" + _render_on_id).append(jq_obj);
         });

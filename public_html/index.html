@@ -25,7 +25,7 @@
 
                     <span class="typeahead__query">
                         <input class="js-typeahead-model" id="car-model-query" name="model[query]" type="search" placeholder="Modelo" autocomplete="off">
-                        <span id="model-cancel-icon" class="fa fa-times cancel-search" onclick="modelCancelSearching()"></span>
+                        <span style="display:none;" id="model-cancel-icon" class="fa fa-times cancel-search" onclick="modelCancelSearching()"></span>
                     </span>
                     <span class="typeahead__button">
                         <button type="submit">
@@ -38,7 +38,7 @@
 
                     <span class="typeahead__query">
                         <input class="js-typeahead-year" id="car-year-query" name="year[query]" type="search" placeholder="Año" autocomplete="off">
-                        <span id="year-cancel-icon" class="fa fa-times cancel-search" onclick="yearCancelSearching()"></span>
+                        <span style="display:none;" id="year-cancel-icon" class="fa fa-times cancel-search" onclick="yearCancelSearching()"></span>
                     </span>
                     <span class="typeahead__button">
                         <button type="submit">
@@ -65,13 +65,28 @@
 
                 });
 
+                $("#car-model-query").keyup(function(){
+                    if($("#car-model-query").val().length > 0)
+                        $("#model-cancel-icon").show();
+                    else
+                        $("#model-cancel-icon").hide()
+                });
+                $("#car-year-query").keyup(function(){
+                    if($("#car-year-query").val().length > 0)
+                        $("#year-cancel-icon").show();
+                    else
+                        $("#year-cancel-icon").hide()
+                });
+
 
                 function modelCancelSearching(){
+                    $("#model-cancel-icon").hide()
                     $("#car-model-query").val('');
                     cm.show_all()
                 }
                 function yearCancelSearching(){
                     $("#car-year-query").val('');
+                    $("#year-cancel-icon").hide()
                     cm.show_all()
                 }
 
