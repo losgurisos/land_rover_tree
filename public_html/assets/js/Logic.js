@@ -11,14 +11,14 @@ $(document).ready(function () {
 
     cm.add_car(car_cat_pos_x.centre_steer, 13, "assets/images/cars/1 Decada 45-54/1 Centre Steer (1947).png", car_assets.series1_circle, "1947", "Centre Steer", "", "El Centre Steer es el nombre dado por los aficionados al prototipo del automóvil 4x4 Land Rover. Siendo un prototipo, sólo un ejemplo fue construido y el vehículo de producción difería significativamente de muchas maneras. Desarrollado a finales de 1947 por el Rover Motor Co., el Land Rover estaba destinado a ser un vehículo agrícola basado en el éxito en tiempos de guerra Jeep Willys.");
     cm.add_car(car_cat_pos_x.centre_steer, 'auto', "assets/images/cars/1 Decada 45-54/2 Series 1 80_ (1948).png", car_assets.series1_circle, "1948", "Series I", "80''", "Land Rover entró en producción en 1948, con lo que más tarde se denominó la Serie I. Este fue presentado en el Salón de Amsterdam. Fue diseñado originalmente para la explotación agrícola o industrial ligero, y tenía un chasis de acero de sección rectangular, y un cuerpo de aluminio. Originalmente, el Land Rover era un modelo único de oferta, que a partir de 1948 hasta 1951 utiliza una distancia entre ejes (2.000 mm) de 80 pulgadas y un motor de gasolina de 1.6 litros que produce alrededor de 50 CV (37 kW; 51 PS).");
-    cm.add_car(745, 'auto', "assets/images/cars/1 Decada 45-54/3 Tickford SW (1949).png", car_assets.series1_circle, "1949", "Tickford SW", "80''", "Desde el principio se vio que algunos compradores querrían las habilidades de un Land Rover sin los interiores espartanos. En 1949, Land Rover puso en marcha una segunda opción, denominado \"Station Wagon\", equipado con una carrocería construida por Tickford, un carrocero conocido por su trabajo con Rolls-Royce y Lagonda. La carrocería fue construida en madera y tenía capacidad para siete personas. Tickford estaba bien equipado en comparación con el estándar de Land Rover, teniendo asientos de cuero, un calentador, una sola pieza parabrisas laminado, una cubierta de rueda de repuesto de hojalata y otras opciones. La construcción de madera hizo que sean caros de construir. El Tickford se grava como un coche privado, que atrajo a altos niveles de impuesto sobre las compras a diferencia del original Land Rover. Como resultado, menos de 700 Tickfords se vendieron, y todos menos 50 fueron exportados.");
+    cm.add_car(674, 'auto', "assets/images/cars/1 Decada 45-54/3 Tickford SW (1949).png", car_assets.series1_circle, "1949", "Tickford SW", "80''", "Desde el principio se vio que algunos compradores querrían las habilidades de un Land Rover sin los interiores espartanos. En 1949, Land Rover puso en marcha una segunda opción, denominado \"Station Wagon\", equipado con una carrocería construida por Tickford, un carrocero conocido por su trabajo con Rolls-Royce y Lagonda. La carrocería fue construida en madera y tenía capacidad para siete personas. Tickford estaba bien equipado en comparación con el estándar de Land Rover, teniendo asientos de cuero, un calentador, una sola pieza parabrisas laminado, una cubierta de rueda de repuesto de hojalata y otras opciones. La construcción de madera hizo que sean caros de construir. El Tickford se grava como un coche privado, que atrajo a altos niveles de impuesto sobre las compras a diferencia del original Land Rover. Como resultado, menos de 700 Tickfords se vendieron, y todos menos 50 fueron exportados.");
     cm.add_car(car_cat_pos_x.brown_3, 'auto', "assets/images/cars/1 Decada 45-54/4 Rolls Royce 81_ (1950).png", car_assets.brown_circle, "1951", "Rolls-Royce B40", "81''", "Texto 4");
     cm.add_car(car_cat_pos_x.Road_Rover_1, 'auto', "assets/images/cars/1 Decada 45-54/5 Road Rover (1951).png", car_assets.brown_circle, "1951", "Road Rover", "", "Texto 5");
     cm.add_car(car_cat_pos_x.brown_1, 'auto', "assets/images/cars/1 Decada 45-54/6 Pick-up 104_  (1951).png", car_assets.brown_circle, "1951", "Pick-up", "104''", "Texto 6");
     cm.add_car(car_cat_pos_x.brown_2, 'auto', "assets/images/cars/1 Decada 45-54/7 86_ Army Staff (1951).png", car_assets.brown_circle, "1951", "Army Staff", "86''", "Texto 7");
-    cm.add_car(464, 'auto', "assets/images/cars/1 Decada 45-54/8 Minerva 80_ (1952).png", car_assets.series1_circle, "1952", "Minerva", "80''", "Texto 8");
+    cm.add_car(419, 'auto', "assets/images/cars/1 Decada 45-54/8 Minerva 80_ (1952).png", car_assets.series1_circle, "1952", "Minerva", "80''", "Texto 8");
     cm.add_car(car_cat_pos_x.brown_4 + 20, 'auto', "assets/images/cars/1 Decada 45-54/9 Tractor (1952).png", car_assets.brown_circle, "1952", "Tractor", "86''", "Texto 9");
-    cm.add_car(329, 'auto', "assets/images/cars/1 Decada 45-54/10 Tempo 80_ (1953).png", car_assets.series1_circle, "1953", "Tempo", "80''", "Texto 10");
+    cm.add_car(297, 'auto', "assets/images/cars/1 Decada 45-54/10 Tempo 80_ (1953).png", car_assets.series1_circle, "1953", "Tempo", "80''", "Texto 10");
     cm.add_car(car_cat_pos_x.centre_steer, 'auto', "assets/images/cars/1 Decada 45-54/11 Series 1 86_ (1954).png", car_assets.series1_circle, "1954", "Series I", "86''", "Texto 11");
     cm.add_car(car_cat_pos_x.LWD_2, 'auto', "assets/images/cars/1 Decada 45-54/12 Series I LWB 107_ (1954).png", car_assets.series1_circle, "1954", "Series I LWB", "107''", "Texto 12");
     cm.add_car(car_cat_pos_x.brown_3 + 30, 'auto', "assets/images/cars/1 Decada 45-54/13 Mulliners SW (1954).png", car_assets.brown_circle, "1954", "Mulliners SW", "", "Texto 13");
@@ -101,8 +101,8 @@ $(document).ready(function () {
     cm.add_car(car_cat_pos_x.Bowler, 'auto', "assets/images/cars/7 Decada 05-15/90 EXR (2011).png", car_assets.violet_circle, "2011", "EXR", "", "Texto 90");
     cm.add_car(car_cat_pos_x.Foers_ibex, 'auto', "assets/images/cars/7 Decada 05-15/91 F8 (2011).png", car_assets.violet_circle, "2011", "F8", "", "Texto 91");
     cm.add_car(car_cat_pos_x.Evoque, 'auto', "assets/images/cars/7 Decada 05-15/92 Evoque L538 (2011).png", car_assets.rrover_circle, "2011", "Evoque L538", "", "Texto 92");
-    cm.add_car(car_cat_pos_x.brown_5 + 20, 'auto', "assets/images/cars/7 Decada 05-15/93 DC100 (2011).png", car_assets.brown_circle, "2011", "DC100", "", "Texto 93");
-    cm.add_car(car_cat_pos_x.brown_6 + 20, 'auto', "assets/images/cars/7 Decada 05-15/94 DC100 Sport (2011).png", car_assets.brown_circle, "2011", "DC100 Sport", "", "Texto 94");
+    cm.add_car(car_cat_pos_x.brown_5 + 10, 'auto', "assets/images/cars/7 Decada 05-15/93 DC100 (2011).png", car_assets.brown_circle, "2011", "DC100", "", "Texto 93");
+    cm.add_car(car_cat_pos_x.brown_6 + 5, 'auto', "assets/images/cars/7 Decada 05-15/94 DC100 Sport (2011).png", car_assets.brown_circle, "2011", "DC100 Sport", "", "Texto 94");
     cm.add_car(car_cat_pos_x.brown_4 + 20, 'auto', "assets/images/cars/7 Decada 05-15/95 Evoque convertible (2012).png", car_assets.brown_circle, "2012", "Evoque convertible", "", "Texto 95");
     cm.add_car(car_cat_pos_x.Road_Rover_2, 'auto', "assets/images/cars/7 Decada 05-15/96 Range Rover L405 (2013).png", car_assets.rrover_circle, "2013", "Range Rover L405", "", "Texto 96");
     cm.add_car(car_cat_pos_x.Moratab, 'auto', "assets/images/cars/7 Decada 05-15/97 Herour (2014).png", car_assets.violet_circle, "2014", "Herour", "", "Texto 97");
@@ -128,33 +128,33 @@ var car_assets = {
 };
 
 var car_cat_pos_x = {
-    Moratab: 96,
-    Militar: 162,
-    SWB: 238,
-    Santana: 238,
-    LWD_1: 319,
-    QT: 320,
-    Bowler: 392,
-    Forward_Control_1: 392,
-    Foers_ibex: 468,
-    Lightweight: 534,
-    centre_steer: 603,
-    Defender_1: 608,
-    Defender_2: 661,
-    LWD_2: 692,
-    Defender_3: 716,
-    Freelander: 782,
-    Forward_Control_2: 829,
-    Discovery: 848,
-    Road_Rover_1: 910,
-    Road_Rover_2: 912,
-    brown_1: 970,
-    Sport: 1043,
-    brown_2: 1030,
-    brown_3: 1090,
-    Evoque: 1114,
-    brown_4: 1150,
-    brown_5: 1210,
-    brown_6: 1270
+    Moratab: 85,
+    Militar: 145,
+    SWB: 213,
+    Santana: 213,
+    LWD_1: 286,
+    QT: 289,
+    Bowler: 352,
+    Forward_Control_1: 355,
+    Foers_ibex: 422,
+    Lightweight: 483,
+    centre_steer: 545,
+    Defender_1: 550,
+    Defender_2: 599,
+    LWD_2: 627,
+    Defender_3: 651,
+    Freelander: 708,
+    Forward_Control_2: 752,
+    Discovery: 768,
+    Road_Rover_1: 827,
+    Road_Rover_2: 826,
+    brown_1: 880,
+    Sport: 946,
+    brown_2: 940,
+    brown_3: 1000,
+    Evoque: 1011,
+    brown_4: 1060,
+    brown_5: 1120,
+    brown_6: 1180
 
 };

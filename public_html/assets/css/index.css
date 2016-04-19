@@ -1,5 +1,5 @@
 .content{
-    background-image: url("../images/back_small.png");
+    background-image: url("../images/back_small_and_larger.png");
     background-size: 1280px;
     background-repeat: no-repeat;
     width: 1280px;
@@ -79,4 +79,15 @@
 .filters {
     width: 400px;
     margin: 0 auto;
+}
+.cancel-search {
+    float: right;
+    margin-right: 10px;
+    margin-top: -23px;
+    position: relative;
+    z-index: 2;
+    color: gray;
+}
+.cancel-search:hover {
+    color: black;
 }

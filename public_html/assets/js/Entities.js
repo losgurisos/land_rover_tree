@@ -63,7 +63,7 @@ var CarManager = function () {
             jq_obj.addClass("car_render");
             jq_obj.css("left", typeof c.position.x !== 'number' ? 0:c.position.x );
             // todo: some hardcode here
-            jq_obj.css("top",c.position.y === 'auto'?  Math.ceil((parseInt(c.year) - 1945) * 18.1 + 15) : c.position.y);
+            jq_obj.css("top",c.position.y === 'auto'?  Math.ceil((parseInt(c.year) - 1945) * (1161 - 15) / 70 + 15) : c.position.y);
             jq_obj.css("position", "absolute");
             $("#" + _render_on_id).append(jq_obj);
         });
@@ -75,6 +75,15 @@ var CarManager = function () {
         $(".car_render").fadeOut();
         _car_list.forEach(function (c) {
             if (c.name == name) {
+                var car_dom_id = _id_format.replace("{{id}}", c.id);
+                $("#" + car_dom_id).fadeIn();
+            }
+        });
+    };
+    this.show_by_year = function (year) {
+        $(".car_render").fadeOut();
+        _car_list.forEach(function (c) {
+            if (c.year == year) {
                 var car_dom_id = _id_format.replace("{{id}}", c.id);
                 $("#" + car_dom_id).fadeIn();
             }

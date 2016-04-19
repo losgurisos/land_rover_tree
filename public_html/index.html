@@ -10,8 +10,10 @@
         <script src="assets/js/vendor/jquery-2.2.3.min.js"></script>
         <script src="assets/js/vendor/featherlight.min.js"></script>
         <script src="assets/js/vendor/jquery.typeahead.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
         <script src="assets/js/Entities.js"></script>
         <script src="assets/js/Logic.js"></script>
+
 
 
     </head>
@@ -22,7 +24,21 @@
                 <div class="typeahead__field">
 
                     <span class="typeahead__query">
-                        <input class="js-typeahead-model" name="model[query]" type="search" placeholder="Modelo" autocomplete="off">
+                        <input class="js-typeahead-model" id="car-model-query" name="model[query]" type="search" placeholder="Modelo" autocomplete="off">
+                        <span id="model-cancel-icon" class="fa fa-times cancel-search" onclick="modelCancelSearching()"></span>
+                    </span>
+                    <span class="typeahead__button">
+                        <button type="submit">
+                            <i class="typeahead__search-icon"></i>
+                        </button>
+                    </span>
+
+                </div>
+                <div class="typeahead__field">
+
+                    <span class="typeahead__query">
+                        <input class="js-typeahead-year" id="car-year-query" name="year[query]" type="search" placeholder="Año" autocomplete="off">
+                        <span id="year-cancel-icon" class="fa fa-times cancel-search" onclick="yearCancelSearching()"></span>
                     </span>
                     <span class="typeahead__button">
                         <button type="submit">
@@ -46,12 +62,18 @@
                                 + "<div class='popup_description'>" + selected_car.description + "</div>"
                                 + "</div>");
                     });
-                    $(".typeahead__cancel-button").click(function (e) {
-                        alert(e);
-                        cm.show_all();
-                    });
+
                 });
 
+
+                function modelCancelSearching(){
+                    $("#car-model-query").val('');
+                    cm.show_all()
+                }
+                function yearCancelSearching(){
+                    $("#car-year-query").val('');
+                    cm.show_all()
+                }
 
 
                 $.typeahead({
@@ -66,6 +88,27 @@
                     callback: {
                         onClickAfter: function (node, a, item, event) {
                             cm.show_by_name(item.display);
+                            console.log(item.display);
+                        },
+                    }
+                });
+                $.typeahead({
+                    input: '.js-typeahead-year',
+                    order: "desc",
+                    hint: true,
+                    cancelButton: false,
+                    source: {
+                        data: function(){
+                            var years = [];
+                            for(var i = 1945; i <= 2015; i++)
+                                years.push(String(i));
+                            return years;
+                        }()
+
+                    },
+                    callback: {
+                        onClickAfter: function (node, a, item, event) {
+                            cm.show_by_year(item.display);
                             console.log(item.display);
                         },
                     }
