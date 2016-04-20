@@ -1,5 +1,11 @@
+
+body{
+    font-family: Helvetica;
+}
 .content{
-    background-image: url("../images/back_small_and_larger.png");
+   //background-image: url("../images/back_darker1.png");
+    //background-image: url("../images/back_normal.png");
+    background-image: url("../images/back_darker2.png");
     background-size: 1280px;
     background-repeat: no-repeat;
     width: 1280px;
@@ -48,11 +54,13 @@
 .car_name {
     width: 100%;
     margin: 0;
-    font-size: 8px;
+    font-size: 7px;
+    text-shadow: 1px 1px #646464;
     color: white;
     text-align: center;
     padding: 0px;
     box-sizing: border-box;
+    line-height: 7px;
 }
 
 .popup {
