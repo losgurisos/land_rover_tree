@@ -3,7 +3,7 @@ body{
     font-family: Helvetica;
 }
 .content{
-   //background-image: url("../images/back_darker1.png");
+    //background-image: url("../images/back_darker1.png");
     //background-image: url("../images/back_normal.png");
     background-image: url("../images/back_darker2.png");
     background-size: 1280px;
@@ -85,8 +85,12 @@ body{
     font-size: 16px;
 }
 .filters {
-    width: 400px;
+    background-image: url("../images/back_header.png");
     margin: 0 auto;
+    width: 1280px;
+    background-size: 1280px;
+    background-repeat: no-repeat;
+    height: 140px;
 }
 .cancel-search {
     float: right;
@@ -98,4 +102,10 @@ body{
 }
 .cancel-search:hover {
     color: black;
+}
+.typeahead__container {   
+    width: 400px;    padding-top: 10px;
+    margin: 0 auto;
+    position: relative;
+    font: 14px Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
