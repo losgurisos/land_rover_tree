@@ -30,7 +30,7 @@ $(document).ready(function () {
     cm.add_car(car_cat_pos_x.centre_steer, 'auto', "assets/images/cars/2 Decada 55-64/19 Series IIA 88_ (1961).png", car_assets.series2_circle, "1961", "Series IIA", "88''", "Texto 19");
     cm.add_car(car_cat_pos_x.LWD_2, 'auto', "assets/images/cars/2 Decada 55-64/20 LWB 109_ (1961).png", car_assets.series2_circle, "1961", "LWB", "109''", "Texto 20");
     cm.add_car(car_cat_pos_x.brown_1, 'auto', "assets/images/cars/2 Decada 55-64/21 Forest Rover 109_ (1961).png", car_assets.brown_circle, "1961", "Forest Rover", "109''", "Texto 21");
-    cm.add_car(car_cat_pos_x.brown_2, 'auto', "assets/images/cars/2 Decada 55-64/22 Vicker's Hover Rover (1961).png", car_assets.brown_circle, "1961", "Vicker's Hover Rover", "", "Texto 22");
+    cm.add_car(car_cat_pos_x.brown_2, 'auto', "assets/images/cars/2 Decada 55-64/22 Vicker_s Hover Rover (1961).png", car_assets.brown_circle, "1961", "Vicker's Hover Rover", "", "Texto 22");
     cm.add_car(car_cat_pos_x.Forward_Control_2, 300, "assets/images/cars/2 Decada 55-64/23 Forward Control 109_ (1962).png", car_assets.series2_circle, "1962", "Forward Control", "109''", "Texto 23");
     cm.add_car(car_cat_pos_x.brown_3, 'auto', "assets/images/cars/2 Decada 55-64/24 FV18601 (1962).png", car_assets.brown_circle, "1962", "FV18601", "", "Texto 24");
     cm.add_car(car_cat_pos_x.brown_4, 'auto', "assets/images/cars/2 Decada 55-64/25 88_Amph (1962).png", car_assets.brown_circle, "1962", "Amph", "88''", "Texto 25");
@@ -83,7 +83,7 @@ $(document).ready(function () {
     cm.add_car(car_cat_pos_x.Road_Rover_2, 'auto', "assets/images/cars/6 Decada 95-04/72 P38A (1995).png", car_assets.rrover_circle, "1995", "P38A", "", "Texto 72");
     cm.add_car(car_cat_pos_x.Freelander, 'auto', "assets/images/cars/6 Decada 95-04/73 Freelander I (1997).png", car_assets.freelander_circle, "1997", "Freelander 1", "", "Texto 73");
     cm.add_car(car_cat_pos_x.brown_1, 'auto', "assets/images/cars/6 Decada 95-04/74 LCV 2_3 (1997).png", car_assets.brown_circle, "1997", "LCV 2/3", "", "Texto 74");
-    cm.add_car(car_cat_pos_x.brown_2, 'auto', "assets/images/cars/6 Decada 95-04/75 Farmer's Friend (1998).png", car_assets.brown_circle, "1998", "Farmer's Friend", "", "Texto 75");
+    cm.add_car(car_cat_pos_x.brown_2, 'auto', "assets/images/cars/6 Decada 95-04/75 Farmer_s Friend (1998).png", car_assets.brown_circle, "1998", "Farmer's Friend", "", "Texto 75");
     cm.add_car(car_cat_pos_x.Discovery, 'auto', "assets/images/cars/6 Decada 95-04/76 Discovery II (1999).png", car_assets.discovery_circle, "1999", "Discovery 2", "", "Texto 76");
     cm.add_car(car_cat_pos_x.brown_3, 'auto', "assets/images/cars/6 Decada 95-04/77 SVX (1999).png", car_assets.brown_circle, "1999", "SVX", "", "Texto 77");
     cm.add_car(car_cat_pos_x.Santana, 'auto', "assets/images/cars/6 Decada 95-04/78 109_ Anibal PS10 (2001).png", car_assets.violet_circle, "2001", "109'' Anibal PS10", "109''", "Texto 78");
