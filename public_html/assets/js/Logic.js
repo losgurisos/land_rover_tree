@@ -25,7 +25,7 @@ $(document).ready(function () {
     cm.add_car(car_cat_pos_x.Forward_Control_2, 'auto', "assets/images/cars/2 Decada 55-64/14 Forward Control 107_ (1955).png", car_assets.brown_circle, "1955", "Forward Control", "107''", "Texto 14");
     cm.add_car(car_cat_pos_x.centre_steer, 210, "assets/images/cars/2 Decada 55-64/15 Series I 88_ (1956).png", car_assets.series1_circle, "1956", "Series I", "88''", "Texto 15");
     cm.add_car(car_cat_pos_x.Road_Rover_1, 'auto', "assets/images/cars/2 Decada 55-64/16 Road Rover (1957).png", car_assets.brown_circle, "1957", "Road Rover", "", "Texto 16");
-    //cm.add_car(car_cat_pos_x.LWD_2, 'auto', "assets/images/cars/2 Decada 55-64/17 Falta foto", car_assets.series2_circle, "1959", "Series II SWB LWB", "109''", "Texto 17");
+    cm.add_car(car_cat_pos_x.LWD_2, 226, "assets/images/cars/santana.png", car_assets.series2_circle, "1959", "Series II SWB LWB", "109''", "Texto 17");
     cm.add_car(car_cat_pos_x.Forward_Control_2, 240, "assets/images/cars/2 Decada 55-64/18 Forward Control 88_ (1960).png", car_assets.brown_circle, "1960", "Forward Control", "88''", "Texto 18");
     cm.add_car(car_cat_pos_x.centre_steer, 'auto', "assets/images/cars/2 Decada 55-64/19 Series IIA 88_ (1961).png", car_assets.series2_circle, "1961", "Series IIA", "88''", "Texto 19");
     cm.add_car(car_cat_pos_x.LWD_2, 'auto', "assets/images/cars/2 Decada 55-64/20 LWB 109_ (1961).png", car_assets.series2_circle, "1961", "LWB", "109''", "Texto 20");
